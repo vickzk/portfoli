@@ -1,69 +1,89 @@
-(function(){
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  try{
-    var saved = localStorage.getItem('vt-theme');
-    if(saved) document.documentElement.setAttribute('data-theme', saved);
-  }catch(e){}
-
-  var themeBtn = document.getElementById('themeBtn');
-  themeBtn.addEventListener('click', function(){
-    var cur = document.documentElement.getAttribute('data-theme');
-    var mql = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var next;
-    if(!cur){ next = mql ? 'light' : 'dark'; }
-    else if(cur === 'dark'){ next = 'light'; }
-    else { next = 'dark'; }
-    document.documentElement.setAttribute('data-theme', next);
-    try{ localStorage.setItem('vt-theme', next); }catch(e){}
-  });
-
-  var mobileNav = document.getElementById('mobileNav');
-  var navToggle = document.getElementById('navToggle');
-  navToggle.addEventListener('click', function(){
-    var open = mobileNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  // Native <a href="#id"> navigation already scrolls (smoothly, via CSS
-  // scroll-behavior) and updates the URL — no JS needed for that. We only
-  // need to close the mobile menu when a link is used.
-  document.querySelectorAll('.mobile-nav a').forEach(function(a){
-    a.addEventListener('click', function(){
-      mobileNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
+(() => {
+  // Duplicate the reel so the CSS loop is seamless
+  const track = document.querySelector('.reel-track');
+  if (track) {
+    [...track.children].forEach((img) => {
+      const copy = img.cloneNode(true);
+      copy.alt = '';
+      copy.setAttribute('aria-hidden', 'true');
+      track.appendChild(copy);
     });
-  });
+  }
 
-  var TITLES = {
-    home: 'Vignesh T',
-    about: 'About — Vignesh T',
-    experience: 'Experience — Vignesh T',
-    projects: 'Projects — Vignesh T',
-    connect: 'Connect — Vignesh T'
-  };
-  var topnavLinks = document.querySelectorAll('.topnav a, .mobile-nav a');
-  var sections = document.querySelectorAll('main > section[id]');
-
-  var sectionObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(!entry.isIntersecting) return;
-      var id = entry.target.id;
-      topnavLinks.forEach(function(a){
-        a.setAttribute('aria-current', a.getAttribute('data-target') === id ? 'true' : 'false');
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
       });
-      if(TITLES[id]) document.title = TITLES[id];
-    });
-  }, { rootMargin: '-50% 0px -45% 0px', threshold: 0 });
-  sections.forEach(function(s){ sectionObserver.observe(s); });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('is-in'));
+  }
 
-  var revealEls = document.querySelectorAll('.reveal');
-  var revealObserver = new IntersectionObserver(function(entries, obs){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('in');
-        obs.unobserve(entry.target);
-      }
+  // Highlight the nav link for the section in view
+  const links = [...document.querySelectorAll('.topnav a')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const setActive = () => {
+    const y = window.scrollY + window.innerHeight * 0.35;
+    let current = sections[0];
+    sections.forEach((s) => { if (s.offsetTop <= y) current = s; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = sections[sections.length - 1];
+    links.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === '#' + current.id));
+  };
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  // Gallery filters
+  const tiles = [...document.querySelectorAll('.tile')];
+  const filters = document.querySelectorAll('.filter');
+  filters.forEach((btn) => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    filters.forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', String(on));
     });
-  }, { threshold: 0.15 });
-  revealEls.forEach(function(el){ revealObserver.observe(el); });
+    tiles.forEach((t) => t.classList.toggle('is-hidden', f !== 'all' && t.dataset.cat !== f));
+  }));
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  let idx = 0;
+  const visible = () => tiles.filter((t) => !t.classList.contains('is-hidden'));
+  const show = (i) => {
+    const list = visible();
+    idx = (i + list.length) % list.length;
+    const t = list[idx];
+    const img = t.querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    const b = t.querySelector('b').textContent;
+    const d = t.querySelector('figcaption > span:last-child').textContent;
+    lbCap.innerHTML = '';
+    const title = document.createElement('b');
+    title.textContent = b;
+    lbCap.append(title, d);
+  };
+  tiles.forEach((t) => {
+    t.tabIndex = 0;
+    t.setAttribute('role', 'button');
+    const open = () => { show(visible().indexOf(t)); lb.showModal(); };
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+  lb.addEventListener('click', (e) => {
+    const action = e.target.closest('[data-lb]')?.dataset.lb;
+    if (action === 'close' || e.target === lb) lb.close();
+    if (action === 'prev') show(idx - 1);
+    if (action === 'next') show(idx + 1);
+  });
+  lb.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
 })();
