@@ -3,279 +3,421 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vignesh T</title>
-<meta name="description" content="Vignesh T — Senior Robotics Engineer specializing in ROS2, Nav2, SLAM, GPS-denied localization, and edge AI for defense, logistics, and hospitality robots.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230071e3'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EVT%3C/text%3E%3C/svg%3E">
+<title>Vignesh T · AI Robotics Engineer</title>
+<meta name="description" content="Vignesh T: Senior AI Robotics Software Engineer. 6+ years and 25+ robots shipped across defense, security, logistics and hospitality. ROS2, Nav2, SLAM, GPS-denied localization, edge AI.">
+<meta name="theme-color" content="#f8fafc">
+<script>
+  (function () {
+    var t;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vignesh T · AI Robotics Engineer">
+<meta property="og:description" content="6+ years building autonomous robots. 25+ robots shipped across defense, security, logistics and hospitality.">
+<meta property="og:url" content="https://vickzk.github.io/portfoli/">
+<meta property="og:image" content="https://vickzk.github.io/portfoli/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230f172a'/%3E%3Ctext x='16' y='21.5' font-family='sans-serif' font-weight='700' font-size='13' fill='white' text-anchor='middle'%3EVT%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header class="topbar">
-  <a href="#home" class="brand" data-target="home">Vignesh T</a>
-  <nav class="topnav" id="topnav">
-    <a href="#about" data-target="about">About</a>
-    <a href="#experience" data-target="experience">Experience</a>
-    <a href="#projects" data-target="projects">Projects</a>
-    <a href="#connect" data-target="connect">Connect</a>
-  </nav>
-  <div class="topbar-actions">
-    <button class="iconbtn" id="themeBtn" aria-label="Toggle color theme" title="Toggle theme">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+  <div class="topbar-in">
+    <a href="#intro" class="brand">
+      <span class="brand-mark">VT</span>
+      <span class="brand-name">Vignesh T</span>
+      <span class="chip chip-accent brand-chip">AI Robotics</span>
+    </a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#intro">Intro</a>
+      <a href="#strengths">Strengths</a>
+      <a href="#robots">Robots</a>
+      <a href="#experience">Experience</a>
+      <a href="#connect">Connect</a>
+    </nav>
+    <div class="topbar-actions">
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark theme">
+      <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     </button>
-    <button class="iconbtn navtoggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">≡</button>
+    <a class="btn btn-accent btn-sm topbar-cta" href="assets/Vignesh_T_Resume.pdf" download>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>
+      Resume
+    </a>
+    </div>
   </div>
 </header>
 
-<nav class="mobile-nav" id="mobileNav">
-  <a href="#about" data-target="about">About</a>
-  <a href="#experience" data-target="experience">Experience</a>
-  <a href="#projects" data-target="projects">Projects</a>
-  <a href="#connect" data-target="connect">Connect</a>
-</nav>
-
 <main>
 
-  <section id="home" class="hero">
-    <p class="hero-kicker">Vignesh T</p>
-    <h1 class="hero-title">AI Robotics Software Engineer</h1>
-    <p class="hero-sub">Building autonomous robots for defense, logistics, and hospitality — six years, six-plus production platforms.</p>
-    <div class="hero-cta">
-      <a class="btn btn-accent" href="#projects" data-target="projects">See my work</a>
-      <a class="btn btn-ghost" href="#connect" data-target="connect">Get in touch</a>
-    </div>
-    <a class="scroll-cue" href="#about" data-target="about">
-      <span>Scroll</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"></path></svg>
-    </a>
-  </section>
-
-  <section id="about" class="band band-alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">About</p>
-        <h2 class="section-title">Six years in autonomous robotics.</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-photo reveal">
-          <img src="assets/images/hero.jpg" alt="Vignesh T standing between two red Security Robotix patrol robots in a building lobby" width="648" height="1440" />
+  <!-- INTRO -->
+  <section id="intro" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-line">Autonomy for the real world</p>
+        <h1 class="hero-name">Vignesh T</h1>
+        <p class="hero-role">Senior AI Robotics Software Engineer</p>
+        <p class="hero-lede">I build robots that leave the lab. For six years I've taken autonomous systems from bare hardware to production across defense, security, logistics and hospitality.</p>
+        <ul class="chips" aria-label="Core skills">
+          <li class="chip">ROS2 &amp; Nav2</li>
+          <li class="chip">SLAM</li>
+          <li class="chip">GPS-Denied Localization</li>
+          <li class="chip">VIO</li>
+          <li class="chip">NVIDIA Jetson</li>
+          <li class="chip">Isaac Sim &amp; HIL</li>
+          <li class="chip">OpenRMF Fleets</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#robots">See the robots
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-outline" href="assets/Vignesh_T_Resume.pdf" download>Download resume (PDF)</a>
         </div>
-        <div class="about-text reveal">
-          <p>Senior Robotics Engineer with six-plus years building and deploying robotic systems across defense, logistics, hospitality, and outdoor environments. Deep expertise in ROS2, Nav2, SLAM, GPS-denied localization, Visual-Inertial Odometry, and edge AI deployment on NVIDIA Jetson platforms.</p>
-          <p>Proven record of owning full robotics infrastructure end-to-end — from hardware integration through simulation, testing, and production deployment — and leading engineering teams across complex, multi-robot programs. Currently developing AI-driven drone platforms for GNSS-contested defense missions at Paar Autonomy.</p>
+      </div>
 
-          <h3 class="sub">Focus</h3>
-          <ul class="plain-list">
-            <li><b>Autonomy, end to end.</b> SLAM, localization, sensor fusion, and navigation owned as one stack, not stitched-together modules.</li>
-            <li><b>GPS-denied operation.</b> VIO, monocular feature matching, and satellite-image localization for GNSS-contested terrain.</li>
-            <li><b>Production fleets.</b> Six-plus robots shipped across hospitality, warehousing, and logistics — not lab demos.</li>
-            <li><b>Simulation-first.</b> Isaac Sim, Gazebo, and Unity validation before any platform touches the field.</li>
-          </ul>
-
-          <h3 class="sub">Skills</h3>
-          <div class="skill-lines">
-            <p><b>Autonomy &amp; Navigation —</b> ROS2, Nav2, SLAM, Motion Planning, Sensor Fusion, GPS-Denied Localization, VIO, Visual Localization, Behavior Trees, Collision Avoidance, Multi-Robot Coordination, OpenRMF, Fleet Management</p>
-            <p><b>Perception &amp; Edge AI —</b> LiDAR, RGB-D, Mono &amp; Thermal Cameras, IMU, Point Cloud (PCL), NVIDIA Jetson Orin, Edge AI Inference</p>
-            <p><b>Simulation &amp; Infra —</b> NVIDIA Isaac Sim, Gazebo, Unity, Sensor Simulation, HIL Testing, CI/CD, Regression Testing</p>
-            <p><b>Programming &amp; Tools —</b> C++, Python, ROS2 Control, Docker, Linux, Git, MQTT, REST APIs, URDF, RViz</p>
-            <p><b>Robot Platforms —</b> Differential Drive, Ackermann, Holonomic / Mecanum, Swerve Drive, Tracked, Quadruped, UAVs</p>
-            <p><b>AI Robotics (emerging) —</b> PyTorch, Imitation Learning, Reinforcement Learning</p>
+      <div class="hero-side">
+        <figure class="frame hero-photo">
+          <img src="assets/img/profile.jpg" alt="Portrait of Vignesh T" width="640" height="640">
+        </figure>
+        <div class="now-card">
+          <span class="live-dot" aria-hidden="true"></span>
+          <div>
+            <p class="label">Now · Paar Autonomy</p>
+            <p class="now-text">AI drones for GPS-denied defense missions</p>
           </div>
-
-          <h3 class="sub">Leadership &amp; open source</h3>
-          <ul class="plain-list">
-            <li>Active contributor to the Nav2 project — a large-map loading optimization from production work at Kabam Robotics was merged upstream.</li>
-            <li>Led a 5-member cross-functional robotics team at Goat Robotics — sprint planning, code review, and release management.</li>
-            <li>Collaborated with DRDO scientists and IIT/NIT researchers on multi-domain unmanned platform research for Indian defense programs.</li>
-          </ul>
         </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="stats">
+        <div class="stat"><dt>Years in robotics</dt><dd>6+</dd></div>
+        <div class="stat"><dt>Robots shipped</dt><dd>25+</dd></div>
+        <div class="stat"><dt>Robotics companies</dt><dd>4</dd></div>
+        <div class="stat"><dt>Nav2 contributor</dt><dd>Merged<span class="stat-sub"> upstream</span></dd></div>
+      </dl>
+    </div>
+
+    <div class="reel" aria-label="Robots I have worked on">
+      <div class="reel-track">
+        <img src="assets/img/hotel.jpg" alt="Hotel delivery robot beside a vending cart" loading="lazy">
+        <img src="assets/img/swerve.jpg" alt="Gold swerve-drive unmanned ground vehicle" loading="lazy">
+        <img src="assets/img/patrol-duo.jpg" alt="Vignesh standing between two red patrol robots" loading="lazy">
+        <img src="assets/img/colab-sg.jpg" alt="Tall service robot outdoors in Singapore" loading="lazy">
+        <img src="assets/img/tracked.jpg" alt="Tracked robot with a sensor mast" loading="lazy">
+        <img src="assets/img/shelf-fleet.jpg" alt="Shelf-carrying AMRs on a factory floor" loading="lazy">
+        <img src="assets/img/halo.jpg" alt="Rendered Halo outdoor security robot" loading="lazy">
+        <img src="assets/img/person-follow.jpg" alt="Person-following robot in a corridor" loading="lazy">
+        <img src="assets/img/quadruped.jpg" alt="Quadruped robot on a painted floor" loading="lazy">
+        <img src="assets/img/trolley.jpg" alt="AMR docking beneath a warehouse trolley" loading="lazy">
       </div>
     </div>
   </section>
 
+  <!-- STRENGTHS -->
+  <section id="strengths" class="band">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Strengths</p>
+        <h2 class="section-title">Owning the whole robot.</h2>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-media"><img src="assets/img/amr-dev.jpg" alt="Layered AMR prototype built from scratch" loading="lazy"></div>
+          <div class="card-body">
+            <p class="label">Autonomy stack</p>
+            <h3>End-to-end autonomy</h3>
+            <p>SLAM, localization, sensor fusion, planning and perception, run as one stack instead of separate modules.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media card-media-svg"><img src="assets/img/drone.svg" alt="Illustration of a drone localizing against satellite map features" loading="lazy"></div>
+          <div class="card-body">
+            <p class="label">GPS-denied</p>
+            <h3>Navigation without GPS</h3>
+            <p>Visual-inertial odometry, monocular feature matching and satellite-image localization for drones.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><img src="assets/img/patrol-lineup.jpg" alt="Five patrol robots lined up on an outdoor campus path" loading="lazy"></div>
+          <div class="card-body">
+            <p class="label">Production</p>
+            <h3>Robots in the field, not demos</h3>
+            <p>25+ robots shipped into hotels, warehouses and security patrol, from hardware integration to deployment.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><img src="assets/img/fleet-ui.jpg" alt="Fleet management web dashboard showing a facility map" loading="lazy"></div>
+          <div class="card-body">
+            <p class="label">Multi-robot</p>
+            <h3>Fleet orchestration</h3>
+            <p>OpenRMF with lift and door control, task bidding and traffic management. MQTT telemetry and OTA updates.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><img src="assets/img/tracked.jpg" alt="Tracked UGV with articulated sensor mast" loading="lazy"></div>
+          <div class="card-body">
+            <p class="label">Motion planning</p>
+            <h3>Any drivetrain, any terrain</h3>
+            <p>Swerve, tracked, quadruped, Ackermann and holonomic robots, with kinematics wired into Nav2.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><img src="assets/img/patrol-remote.jpg" alt="Vignesh holding a controller between two patrol robots" loading="lazy"></div>
+          <div class="card-body">
+            <p class="label">Leadership</p>
+            <h3>Leading robotics teams</h3>
+            <p>Led a 5-engineer team through architecture, sprints, code review and releases. Worked alongside DRDO and IIT/NIT researchers.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROBOTS -->
+  <section id="robots" class="band band-alt">
+    <div class="wrap">
+      <header class="section-head section-head-row reveal">
+        <div>
+          <p class="eyebrow">Robots</p>
+          <h2 class="section-title">Robots I've built and deployed.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter robots">
+          <button class="filter is-on" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="defense" aria-pressed="false">Defense</button>
+          <button class="filter" data-filter="security" aria-pressed="false">Security</button>
+          <button class="filter" data-filter="hospitality" aria-pressed="false">Hospitality</button>
+          <button class="filter" data-filter="warehouse" aria-pressed="false">Warehouse &amp; fleet</button>
+          <button class="filter" data-filter="rnd" aria-pressed="false">R&amp;D</button>
+        </div>
+      </header>
+
+      <div class="gallery" id="gallery">
+        <figure class="tile tile-tall" data-cat="hospitality">
+          <img src="assets/img/hotel.jpg" alt="Hotel delivery robot beside a vending cart" width="720" height="1280" loading="lazy">
+          <figcaption><span class="label">Hospitality</span><b>Hotel Delivery Robot</b><span>100+ deliveries a day, &gt;99% completion</span></figcaption>
+        </figure>
+        <figure class="tile tile-tall" data-cat="security">
+          <img src="assets/img/patrol-duo.jpg" alt="Vignesh standing between two red indoor patrol robots" width="630" height="1400" loading="lazy">
+          <figcaption><span class="label">Security</span><b>Indoor Patrol Robots</b><span>SLAM navigation with detection-driven patrol plans</span></figcaption>
+        </figure>
+        <figure class="tile tile-svg" data-cat="defense">
+          <img src="assets/img/drone.svg" alt="Illustration of a drone localizing against satellite map features" width="800" height="600" loading="lazy">
+          <figcaption><span class="label">Defense · UAV</span><b>GPS-Denied Drone</b><span>VIO and satellite-image localization</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="security">
+          <img src="assets/img/halo.jpg" alt="Rendered Halo outdoor security robot" width="643" height="562" loading="lazy">
+          <figcaption><span class="label">Security · Outdoor</span><b>Halo Security Robot</b><span>SLAM navigation for large GPS-denied outdoor sites</span></figcaption>
+        </figure>
+        <figure class="tile tile-wide" data-cat="security">
+          <img src="assets/img/patrol-lineup.jpg" alt="Five patrol robots lined up outdoors on a campus path" width="1400" height="630" loading="lazy">
+          <figcaption><span class="label">Security</span><b>Patrol Fleet</b><span>Multi-robot outdoor patrol</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="security">
+          <img src="assets/img/colab-sg.jpg" alt="Tall service robot deployed outdoors in Singapore" width="650" height="650" loading="lazy">
+          <figcaption><span class="label">Security · Singapore</span><b>Colab Robot</b><span>Navigation software for public-space deployment</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="warehouse">
+          <img src="assets/img/trolley.jpg" alt="AMR docking beneath a warehouse trolley" width="800" height="460" loading="lazy">
+          <figcaption><span class="label">Warehouse</span><b>Trolley Docking AMR</b><span>Lidar trolley detection, docks to ±3 cm</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="defense">
+          <img src="assets/img/swerve.jpg" alt="Gold swerve-drive unmanned ground vehicle" width="1200" height="800" loading="lazy">
+          <figcaption><span class="label">Defense · UGV</span><b>Swerve-Drive UGV</b><span>All-terrain motion planning and kinematics</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="defense">
+          <img src="assets/img/quadruped.jpg" alt="Quadruped robot walking on a painted floor" width="684" height="385" loading="lazy">
+          <figcaption><span class="label">Defense · Legged</span><b>Quadruped</b><span>Motion planning for legged locomotion</span></figcaption>
+        </figure>
+        <figure class="tile tile-tall" data-cat="warehouse">
+          <img src="assets/img/shelf-fleet.jpg" alt="Three shelf-carrying AMRs on a factory floor" width="787" height="1400" loading="lazy">
+          <figcaption><span class="label">Warehouse</span><b>Shelf-Carrying AMR Fleet</b><span>Many robots controlled from one screen</span></figcaption>
+        </figure>
+        <figure class="tile tile-tall" data-cat="security">
+          <img src="assets/img/docking.jpg" alt="Patrol robot docked at a wall-mounted charging station" width="787" height="1400" loading="lazy">
+          <figcaption><span class="label">Security</span><b>Autonomous Charging</b><span>AprilTag and point-cloud docking with cm-level repeatability</span></figcaption>
+        </figure>
+        <figure class="tile tile-tall" data-cat="rnd">
+          <img src="assets/img/person-follow.jpg" alt="Person-following robot in a building corridor" width="787" height="1400" loading="lazy">
+          <figcaption><span class="label">R&amp;D</span><b>Person-Following Robot</b><span>Detects people from leg patterns using only 2D lidar</span></figcaption>
+        </figure>
+        <figure class="tile tile-tall" data-cat="rnd">
+          <img src="assets/img/amr-dev.jpg" alt="Layered AMR prototype with onboard screen" width="630" height="1400" loading="lazy">
+          <figcaption><span class="label">R&amp;D</span><b>AMR Built from Scratch</b><span>Motors, IMU, lidar, depth camera and a full ROS stack</span></figcaption>
+        </figure>
+        <figure class="tile tile-tall" data-cat="warehouse">
+          <img src="assets/img/fleet-demo.jpg" alt="Engineers watching an AMR next to a live fleet dashboard" width="367" height="668" loading="lazy">
+          <figcaption><span class="label">Fleet</span><b>Live Fleet Demo</b><span>Monitor and command every robot at once</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="defense">
+          <img src="assets/img/tracked.jpg" alt="Tracked robot with an articulated sensor mast" width="1200" height="800" loading="lazy">
+          <figcaption><span class="label">Defense · UGV</span><b>Tracked UGV</b><span>Navigation for unstructured terrain</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="warehouse">
+          <img src="assets/img/fleet-ui.jpg" alt="Fleet management web dashboard showing a facility map" width="1400" height="697" loading="lazy">
+          <figcaption><span class="label">Fleet</span><b>Fleet Management UI</b><span>Web dashboard for robot status and goals</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
   <section id="experience" class="band">
     <div class="wrap">
-      <div class="section-head reveal">
+      <header class="section-head reveal">
         <p class="eyebrow">Experience</p>
         <h2 class="section-title">Where I've built.</h2>
+      </header>
+
+      <div class="logo-strip reveal" aria-label="Companies">
+        <img src="assets/img/logo-paar.png" alt="Paar Autonomy" loading="lazy">
+        <img src="assets/img/logo-kabam.png" alt="Kabam Robotics" loading="lazy">
+        <img src="assets/img/logo-novus.png" alt="Novus Hi-Tech" loading="lazy">
+        <img src="assets/img/logo-goat.png" alt="Goat Robotics" loading="lazy">
       </div>
-      <div class="xp-list">
-        <article class="xp-item reveal">
-          <div class="xp-head"><h3>Senior Robotics Engineer</h3><span class="xp-date">Oct 2025 — Present</span></div>
-          <p class="xp-org">Paar Autonomy · Bangalore, India</p>
-          <ul>
-            <li>Developing AI-driven drone platforms for defense, focused on GPS-denied navigation, real-time perception, and mission-critical decisions in GNSS-contested environments.</li>
-            <li>Built large-scale simulation pipelines in NVIDIA Isaac Sim for sensor simulation and automated regression testing across 50+ defense mission scenarios.</li>
-            <li>Designed GPS-denied geo-position estimation fusing VIO, monocular feature matching, and visual localization against satellite imagery.</li>
-            <li>Optimized perception and localization pipelines for real-time edge AI inference on weight-constrained drone platforms.</li>
-          </ul>
+
+      <div class="xp">
+        <article class="xp-row reveal">
+          <div class="xp-media xp-media-1">
+            <img class="svg-fill" src="assets/img/drone.svg" alt="Illustration of a drone localizing without GPS" loading="lazy">
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <img class="xp-logo" src="assets/img/logo-paar.png" alt="" loading="lazy">
+              <span class="xp-date">Oct 2025 – Present</span>
+            </div>
+            <h3>Senior Robotics Engineer</h3>
+            <p class="xp-org">Paar Autonomy · Bangalore</p>
+            <ul>
+              <li>Built GPS-denied position estimation from VIO, monocular feature matching and satellite imagery.</li>
+              <li>Built Isaac Sim pipelines for sensor simulation and regression testing across <b>50+ mission scenarios</b>.</li>
+              <li>Tuned perception for real-time edge AI on NVIDIA hardware, for drones where every gram counts.</li>
+            </ul>
+            <ul class="chips"><li class="chip">Defense</li><li class="chip">UAV</li><li class="chip">Isaac Sim</li><li class="chip">Edge AI</li></ul>
+          </div>
         </article>
-        <article class="xp-item reveal">
-          <div class="xp-head"><h3>Robotics Engineer</h3><span class="xp-date">Nov 2024 — Oct 2025</span></div>
-          <p class="xp-org">Kabam Robotics · Singapore</p>
-          <ul>
-            <li>Designed LiDAR and RGB-D perception modules; built SLAM-based navigation for GPS-denied security patrol across large outdoor environments.</li>
-            <li>Contributed a Nav2 map server optimization — merged upstream — improving large-map loading for deployments spanning 10,000+ m².</li>
-            <li>Built a production-grade multi-map management package for scalable navigation across multi-zone facilities.</li>
-            <li>Implemented behavior-tree decision-making for patrol ops; enhanced robot health monitoring for real-time remote status.</li>
-          </ul>
+
+        <article class="xp-row reveal">
+          <div class="xp-media xp-media-2">
+            <img src="assets/img/halo.jpg" alt="Halo outdoor security robot" loading="lazy">
+            <img src="assets/img/colab-sg.jpg" alt="Colab robot deployed in Singapore" loading="lazy">
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <img class="xp-logo" src="assets/img/logo-kabam.png" alt="" loading="lazy">
+              <span class="xp-date">Nov 2024 – Oct 2025</span>
+            </div>
+            <h3>Robotics Engineer</h3>
+            <p class="xp-org">Kabam Robotics · Singapore</p>
+            <ul>
+              <li>Built SLAM navigation and lidar/RGB-D perception for outdoor security patrol without GPS.</li>
+              <li>Optimized the Nav2 map server, <b>merged upstream</b>, to speed up loading maps of 10,000+ m².</li>
+              <li>Shipped multi-map management and behavior-tree patrol logic.</li>
+            </ul>
+            <ul class="chips"><li class="chip">Security</li><li class="chip">Nav2 upstream</li><li class="chip">Behavior trees</li></ul>
+          </div>
         </article>
-        <article class="xp-item reveal">
-          <div class="xp-head"><h3>Research Engineer — Motion Planning</h3><span class="xp-date">Apr 2024 — Nov 2024</span></div>
-          <p class="xp-org">Novus Hi-Tech · Bangalore, India</p>
-          <ul>
-            <li>Developed motion planning and trajectory optimization for swerve-drive, tracked, quadruped, and Ackermann platforms in unstructured defense terrain.</li>
-            <li>Engineered full-stack kinematic control (forward/inverse kinematics) integrated with Nav2 for all-terrain unmanned ground vehicles.</li>
-            <li>Collaborated with DRDO scientists and IIT/NIT researchers; built HIL simulation environments in Unity for field validation.</li>
-          </ul>
+
+        <article class="xp-row reveal">
+          <div class="xp-media xp-media-3">
+            <img src="assets/img/swerve.jpg" alt="Swerve-drive UGV" loading="lazy">
+            <img src="assets/img/tracked.jpg" alt="Tracked UGV" loading="lazy">
+            <img src="assets/img/quadruped.jpg" alt="Quadruped robot" loading="lazy">
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <img class="xp-logo" src="assets/img/logo-novus.png" alt="" loading="lazy">
+              <span class="xp-date">Apr 2024 – Nov 2024</span>
+            </div>
+            <h3>Research Engineer, Motion Planning</h3>
+            <p class="xp-org">Novus Hi-Tech · Bangalore</p>
+            <ul>
+              <li>Built motion planning for swerve, tracked, quadruped and Ackermann UGVs on rough terrain.</li>
+              <li>Built forward and inverse kinematic control and integrated it with Nav2.</li>
+              <li>Worked with DRDO scientists and IIT/NIT researchers. Built Unity HIL simulation.</li>
+            </ul>
+            <ul class="chips"><li class="chip">Defense</li><li class="chip">Kinematics</li><li class="chip">Unity HIL</li></ul>
+          </div>
         </article>
-        <article class="xp-item reveal">
-          <div class="xp-head"><h3>Robotics Software Engineer — Team Lead</h3><span class="xp-date">2020 — Apr 2024</span></div>
-          <p class="xp-org">Goat Robotics (formerly Katomaran Technologies) · Coimbatore, India</p>
-          <ul>
-            <li>Architected and deployed end-to-end AMR systems on ROS2 across hospitality, warehousing, and logistics; led a 5-member engineering team.</li>
-            <li>Owned complete robotics infrastructure — SLAM, localization, sensor fusion, navigation, perception — delivering 6+ production platforms.</li>
-            <li>Integrated OpenRMF fleet management with lift/door control, task bidding, and traffic management for large multi-robot deployments.</li>
-            <li>Designed AprilTag + point-cloud docking achieving centimeter-level repeatability across all charging stations.</li>
-            <li>Built cloud-connected fleet management with REST APIs, MQTT telemetry, Android HMI, and OTA pipelines; implemented CI/CD.</li>
-          </ul>
-        </article>
-        <article class="xp-item reveal">
-          <div class="xp-head"><h3>B.E. Mechatronics</h3><span class="xp-date">2016 — 2020</span></div>
-          <p class="xp-org">Sri Krishna College of Engineering and Technology, Tamil Nadu</p>
+
+        <article class="xp-row reveal">
+          <div class="xp-media xp-media-3">
+            <img src="assets/img/hotel.jpg" alt="Hotel delivery robot" loading="lazy">
+            <img src="assets/img/patrol-duo.jpg" alt="Indoor patrol robots" loading="lazy">
+            <img src="assets/img/trolley.jpg" alt="Trolley docking AMR" loading="lazy">
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <img class="xp-logo" src="assets/img/logo-goat.png" alt="" loading="lazy">
+              <span class="xp-date">2020 – Apr 2024</span>
+            </div>
+            <h3>Robotics Software Engineer, Team Lead</h3>
+            <p class="xp-org">Goat Robotics (formerly Katomaran) · Coimbatore</p>
+            <ul>
+              <li>Led a 5-engineer team. Shipped <b>25+ robots</b> on ROS2 for hotels, warehouses and logistics.</li>
+              <li>Integrated the OpenRMF fleet manager with lifts, doors, task bidding and traffic management.</li>
+              <li>Built AprilTag and point-cloud docking with cm-level repeatability, plus fleet tooling over MQTT, REST and OTA.</li>
+            </ul>
+            <ul class="chips"><li class="chip">Team lead</li><li class="chip">OpenRMF</li><li class="chip">ROS2</li><li class="chip">CI/CD</li></ul>
+          </div>
         </article>
       </div>
+
+      <p class="edu reveal"><span class="label">Education</span> B.E. Mechatronics · Sri Krishna College of Engineering and Technology · 2016 – 2020</p>
     </div>
   </section>
 
-  <section id="projects" class="band band-alt">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow">Projects</p>
-        <h2 class="section-title">Shipped systems.</h2>
-        <p class="section-lede">A cross-section of production robots — across defense, hospitality, warehousing, and fleet infrastructure.</p>
-      </div>
-      <div class="proj-grid">
-
-        <article class="proj-card reveal">
-          <div class="proj-media empty"><span>Imagery restricted — active defense program</span></div>
-          <div class="proj-body">
-            <span class="proj-tag">Defense</span>
-            <h3>GPS-Denied Drone Localization</h3>
-            <p>Fused VIO, monocular feature matching, and satellite-image visual localization for drones operating in GNSS-contested environments.</p>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-media"><img src="assets/images/amr-dev.jpg" alt="Layered autonomous mobile robot prototype with onboard screen" width="405" height="900" loading="lazy" /></div>
-          <div class="proj-body">
-            <span class="proj-tag">Platform</span>
-            <h3>Autonomous Mobile Robot Platform</h3>
-            <p>Ground-up AMR build — motor, IMU, LiDAR, and depth-camera integration wrapped in a full ROS stack for SLAM and navigation.</p>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-media"><img src="assets/images/person-follow.jpg" alt="A ROS2 person-following robot on a laptop test rig in a building corridor" width="506" height="900" loading="lazy" /></div>
-          <div class="proj-body">
-            <span class="proj-tag">Robotics / Nav</span>
-            <h3>LiDAR-Based Person Following</h3>
-            <p>2D-LiDAR leg-pattern detection with custom tracking to lock onto a target ID and follow it in real time.</p>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-media"><img src="assets/images/hotel.jpg" alt="Hotel delivery robot docked next to a vending cart" width="506" height="900" loading="lazy" /></div>
-          <div class="proj-body">
-            <span class="proj-tag">Hospitality</span>
-            <h3>Autonomous Hotel Delivery Robot</h3>
-            <p>Vending integration, OTP delivery verification, and precision docking — 100+ daily deliveries at &gt;99% completion.</p>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-media"><img src="assets/images/trolley.jpg" alt="AMR positioned beneath a yellow warehouse trolley" width="800" height="460" loading="lazy" /></div>
-          <div class="proj-body">
-            <span class="proj-tag">Warehouse</span>
-            <h3>Trolley Detection &amp; Docking</h3>
-            <p>ICP-based point-cloud matching for laser-based detection, docking, lifting, and dropping — accurate to ±3&nbsp;cm.</p>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-media"><img src="assets/images/fleet.jpg" alt="Three shelf-carrying AMRs staged on a factory floor" width="506" height="900" loading="lazy" /></div>
-          <div class="proj-body">
-            <span class="proj-tag">Fleet Infra</span>
-            <h3>Multi-Robot Fleet Management</h3>
-            <p>Single-screen monitoring and control for a networked robot fleet, with per-robot and whole-fleet commanding.</p>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-media"><img src="assets/images/docking.jpg" alt="Security patrol robot docked and charging against a wall-mounted charging station" width="506" height="900" loading="lazy" /></div>
-          <div class="proj-body">
-            <span class="proj-tag">Robotics / Nav</span>
-            <h3>Autonomous Charging &amp; Docking</h3>
-            <p>AprilTag detection plus 3D point-cloud pattern matching and odometry-frame navigation to dock.</p>
-          </div>
-        </article>
-
-      </div>
-
-      <h3 class="sub reveal" style="margin-top:48px;">Platforms</h3>
-      <div class="plat-row reveal">
-        <div class="plat-item">
-          <div class="plat-media"><img src="assets/images/swerve.jpg" alt="Gold-finished swerve-drive robot prototype" width="900" height="600" loading="lazy" /></div>
-          <p class="plat-cap">Swerve-Drive UGV</p>
-        </div>
-        <div class="plat-item">
-          <div class="plat-media"><img src="assets/images/tracked.jpg" alt="Tracked robot with an articulated sensor and manipulator arm" width="900" height="600" loading="lazy" /></div>
-          <p class="plat-cap">Tracked UGV</p>
-        </div>
-        <div class="plat-item">
-          <div class="plat-media"><img src="assets/images/quadruped.jpg" alt="Quadruped robot walking on a painted floor" width="684" height="385" loading="lazy" /></div>
-          <p class="plat-cap">Quadruped</p>
-        </div>
-        <div class="plat-item">
-          <div class="plat-media"><img src="assets/images/patrol-lineup.jpg" alt="Five patrol robots lined up outdoors on a campus path" width="1100" height="495" loading="lazy" /></div>
-          <p class="plat-cap">Patrol Fleet</p>
-        </div>
-        <div class="plat-item">
-          <div class="plat-media"><img src="assets/images/halo-render.jpg" alt="Rendered security patrol robot" width="643" height="562" loading="lazy" /></div>
-          <p class="plat-cap">Halo Robot</p>
-        </div>
-        <div class="plat-item">
-          <div class="plat-media"><img src="assets/images/colab-mbs.jpg" alt="Tall cylindrical service robot deployed outdoors near Marina Bay Sands" width="650" height="650" loading="lazy" /></div>
-          <p class="plat-cap">Marina Bay</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="connect" class="band">
-    <div class="wrap">
-      <div class="section-head reveal">
+  <!-- CONNECT -->
+  <section id="connect" class="band band-alt">
+    <div class="wrap connect">
+      <header class="section-head section-head-center reveal">
         <p class="eyebrow">Connect</p>
-        <h2 class="section-title">Let's build something.</h2>
-      </div>
-      <div class="connect-card reveal">
-        <h3>Open to senior robotics and autonomy roles.</h3>
-        <p>Defense, field robotics, or production AMR fleets — reach out and let's talk about what you're building.</p>
-        <a class="btn btn-accent" href="mailto:vignesht.tech@gmail.com">Email vignesht.tech@gmail.com</a>
-        <div class="connect-rows">
-          <div class="crow"><span>Phone</span><a href="tel:+919788709988">+91 97887 09988</a></div>
-          <div class="crow"><span>Location</span><span>Bangalore, India</span></div>
-          <div class="crow"><span>LinkedIn</span><a href="https://linkedin.com/in/vignesh-t-tech" target="_blank" rel="noopener">linkedin.com/in/vignesh-t-tech</a></div>
-          <div class="crow"><span>GitHub</span><a href="https://github.com/vickzk" target="_blank" rel="noopener">github.com/vickzk</a></div>
-        </div>
+        <h2 class="section-title">Let's talk robots.</h2>
+      </header>
+      <div class="links reveal">
+        <a class="link-card" href="mailto:vignesht.tech@gmail.com">
+          <span class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span><span class="link-k">Email</span><span class="link-v">vignesht.tech@gmail.com</span></span>
+        </a>
+        <a class="link-card" href="https://linkedin.com/in/vignesh-t-tech" target="_blank" rel="noopener">
+          <span class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></svg></span>
+          <span><span class="link-k">LinkedIn</span><span class="link-v">linkedin.com/in/vignesh-t-tech</span></span>
+        </a>
+        <a class="link-card" href="https://github.com/vickzk" target="_blank" rel="noopener">
+          <span class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></span>
+          <span><span class="link-k">GitHub</span><span class="link-v">github.com/vickzk</span></span>
+        </a>
       </div>
     </div>
-    <footer class="fine">Vignesh T — AI Robotics Software Engineer</footer>
   </section>
 
 </main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>© 2026 Vignesh T · Bengaluru, India</span>
+    <span class="label">ROS2 · Nav2 · SLAM · Edge AI</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Robot photo viewer">
+  <button class="lb-btn lb-close" data-lb="close" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" data-lb="prev" aria-label="Previous photo">←</button>
+  <figure class="lb-fig">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" data-lb="next" aria-label="Next photo">→</button>
+</dialog>
+
 <script src="assets/js/main.js"></script>
 </body>
 </html>
