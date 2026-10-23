@@ -523,3 +523,22 @@ ul { margin: 0; padding: 0; list-style: none; }
   .logo-row img { height: 36px; }
   .logo-row b { font-size: 17px; }
 }
+
+/* phones: uniform logo grid, ROS as a full-width lead tile */
+@media (max-width: 860px) {
+  .logo-wall { grid-template-columns: repeat(3, 1fr); grid-auto-rows: auto; gap: 8px; }
+  .logo-tile, .logo-big, .logo-wide {
+    grid-column: auto; grid-row: auto; aspect-ratio: 1;
+    display: grid; place-items: center; padding: 12px 8px 30px;
+  }
+  .logo-tile img, .logo-big img, .logo-wide img, .logo-row img {
+    width: 74%; height: 46px; max-width: 74%; max-height: 46px; object-fit: contain;
+  }
+  .logo-tile span, .logo-big span, .logo-row b {
+    position: absolute; left: 4px; right: 4px; bottom: 9px; text-align: center;
+    font: 600 10px/13px var(--font-head); letter-spacing: .05em; text-transform: uppercase; color: #64748b;
+    white-space: normal;
+  }
+  .logo-wall .logo-tile:first-child { grid-column: 1 / -1; aspect-ratio: auto; height: 104px; }
+  .logo-wall .logo-tile:first-child img { max-height: 44px; }
+}
