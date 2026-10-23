@@ -1,4 +1,25 @@
 (() => {
+  // Theme toggle (initial theme is set by the inline script in <head>)
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeBtn');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const applyTheme = (t) => {
+    root.dataset.theme = t;
+    themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    themeMeta.content = t === 'dark' ? '#0a101e' : '#f8fafc';
+  };
+  applyTheme(root.dataset.theme || 'light');
+  themeBtn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    let saved;
+    try { saved = localStorage.getItem('theme'); } catch (err) {}
+    if (!saved) applyTheme(e.matches ? 'dark' : 'light');
+  });
+
   // Duplicate the reel so the CSS loop is seamless
   const track = document.querySelector('.reel-track');
   if (track) {
